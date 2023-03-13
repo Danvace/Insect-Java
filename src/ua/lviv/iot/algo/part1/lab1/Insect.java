@@ -10,13 +10,13 @@ import java.util.ArrayList;
 @ToString
 public class Insect {
 
-    String name = "Insect";
+    private String name = "Insect";
 
-    int numberOfLegs;
+    private int numberOfLegs;
 
-    Boolean hasWings = false;
+    private Boolean hasWings = false;
 
-    Boolean isDangerous = false;
+    private Boolean isDangerous = false;
 
     private Boolean isSleeping = false;
 
@@ -31,19 +31,13 @@ public class Insect {
     public void wakeUp(){isSleeping = false;}
 
     public static void main(String[] args) {
-        ArrayList<Insect> listOfInsects = new ArrayList<Insect>();
         Insect cockroach = new Insect("cockroach",4,false,false,false);
         Insect fly = new Insect("fly",6,false,false,false);
+        Insect[] insects = {cockroach,fly , getInstance(), getInstance()};
 
-        listOfInsects.add(cockroach);
-        listOfInsects.add(fly);
-        listOfInsects.add(getInstance());
-        listOfInsects.add(getInstance());
-
-        for(Insect insect:listOfInsects){
-            System.out.println(insect.toString());
+        for (Insect insect:insects){
+            System.out.println(insect);
         }
-
     }
 
 }
