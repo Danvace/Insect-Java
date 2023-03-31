@@ -28,7 +28,7 @@ public class InsectManager extends AddInsect{
     public static void main(String[] args) {
 
         Insect mosquito = new Mosquito("Mosquito" , 4, true , true ,true);
-        Insect herald = new Mosquito("Herald" , 4 , true, true , false );
+        Insect herald = new Mosquito("Denys" , 4 , true, true , false );
 
         Insect hornet = new Hornet("hornet", 5,true , false , false , false , true);
         Insect kingJameson = new Hornet("KingJameson" , 5 , true , false , true , false , true);
