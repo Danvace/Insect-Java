@@ -14,7 +14,9 @@ public class Cockroach extends Insect{
 
     @Override
     public String toString() {
-        return "Cockroach{} " + super.toString();
+        return "Cockroach{" +
+                "vitality=" + vitality +
+                "} " + super.toString();
     }
 
     @Override
@@ -26,4 +28,5 @@ public class Cockroach extends Insect{
     public boolean surviveOverWinter() {
         return vitality;
     }
+
 }
