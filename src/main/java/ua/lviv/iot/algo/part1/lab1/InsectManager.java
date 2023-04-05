@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class InsectManager extends AddInsect{
+public class InsectManager extends ua.lviv.iot.algo.part1.lab1.AddInsect {
 
     private static final List<Insect> insects = new ArrayList<>();
 
