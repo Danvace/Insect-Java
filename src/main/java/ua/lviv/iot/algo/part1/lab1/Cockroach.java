@@ -1,5 +1,8 @@
 package ua.lviv.iot.algo.part1.lab1;
 
+import lombok.Getter;
+
+@Getter
 public class Cockroach extends Insect{
 
     private final boolean vitality;

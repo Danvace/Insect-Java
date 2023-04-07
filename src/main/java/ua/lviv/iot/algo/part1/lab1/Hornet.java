@@ -1,10 +1,11 @@
 package ua.lviv.iot.algo.part1.lab1;
 
-public class Hornet extends Insect implements Hibernationality{
+public class Hornet extends Insect implements Hibernationality {
 
     private final boolean isOldQueen;
     private final boolean isQueen;
-    public Hornet(String name,int numberOfLegs,boolean hasWings, boolean isDangerous,boolean isSleeping,  boolean isOldQueen, boolean isQueen) {
+
+    public Hornet(String name, int numberOfLegs, boolean hasWings, boolean isDangerous, boolean isSleeping, boolean isOldQueen, boolean isQueen) {
         this.isOldQueen = isOldQueen;
         this.isQueen = isQueen;
         setNumberOfLegs(numberOfLegs);
@@ -35,14 +36,14 @@ public class Hornet extends Insect implements Hibernationality{
 
     @Override
     public void hibernate() {
-        if(!isOldQueen){
+        if (!isOldQueen) {
             setIsSleeping(true);
         }
     }
 
     @Override
     public void wakeUp() {
-        if(!isOldQueen){
+        if (!isOldQueen) {
             setIsSleeping(false);
         }
     }

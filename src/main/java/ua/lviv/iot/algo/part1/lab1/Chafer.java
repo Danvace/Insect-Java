@@ -1,11 +1,10 @@
 package ua.lviv.iot.algo.part1.lab1;
 
-public class Chafer extends Insect implements Hibernationality{
+public class Chafer extends Insect implements Hibernationality {
 
     private final boolean isIncubation;
 
-    public Chafer(String name, int numberOfLegs, boolean hasWings , boolean isDangerous , boolean isSleeping, boolean isIncubation )
-    {
+    public Chafer(String name, int numberOfLegs, boolean hasWings, boolean isDangerous, boolean isSleeping, boolean isIncubation) {
         this.isIncubation = isIncubation;
         setName(name);
         setNumberOfLegs(numberOfLegs);
@@ -33,7 +32,7 @@ public class Chafer extends Insect implements Hibernationality{
 
     @Override
     public void hibernate() {
-        if (isIncubation){
+        if (isIncubation) {
             setIsSleeping(true);
         }
     }
