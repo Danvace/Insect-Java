@@ -1,16 +1,11 @@
 package ua.lviv.iot.algo.part1.lab1;
 
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class InsectManagerTest {
 
@@ -45,9 +40,9 @@ class InsectManagerTest {
     }
 
     @Test
-    void testNoArgsConstructor(){
+    void testNoArgsConstructor() {
         InsectManager manager1 = new InsectManager();
-        assertEquals(0,manager1.getInsects().size());
+        assertEquals(0, manager1.getInsects().size());
     }
 
 }

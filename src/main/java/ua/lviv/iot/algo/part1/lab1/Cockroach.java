@@ -3,11 +3,11 @@ package ua.lviv.iot.algo.part1.lab1;
 import lombok.Getter;
 
 @Getter
-public class Cockroach extends Insect{
+public class Cockroach extends Insect {
 
     private final boolean vitality;
 
-    public Cockroach(String name , int  numberOfLegs,boolean hasWings, boolean isDangerous , boolean vitality) {
+    public Cockroach(String name, int numberOfLegs, boolean hasWings, boolean isDangerous, boolean vitality) {
         this.vitality = vitality;
         super.setNumberOfLegs(numberOfLegs);
         super.setHasWings(hasWings);

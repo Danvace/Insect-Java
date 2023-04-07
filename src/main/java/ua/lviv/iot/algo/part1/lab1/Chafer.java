@@ -15,9 +15,7 @@ public class Chafer extends Insect implements Hibernationality {
 
     @Override
     public String toString() {
-        return "Chafer{" +
-                "isIncubation=" + isIncubation +
-                "} " + super.toString();
+        return "Chafer{" + "isIncubation=" + isIncubation + "} " + super.toString();
     }
 
     @Override
