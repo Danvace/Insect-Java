@@ -1,10 +1,19 @@
 package ua.lviv.iot.algo.part1.lab1;
 
+import lombok.ToString;
+
+@ToString(callSuper = true)
 public class Chafer extends Insect implements Hibernationality {
 
     private final boolean isIncubation;
 
-    public Chafer(String name, int numberOfLegs, boolean hasWings, boolean isDangerous, boolean isSleeping, boolean isIncubation) {
+    public Chafer(final String name,
+                  final int numberOfLegs,
+                  final boolean hasWings,
+                  final boolean isDangerous,
+                  final boolean isSleeping,
+                  final boolean isIncubation)
+    {
         this.isIncubation = isIncubation;
         setName(name);
         setNumberOfLegs(numberOfLegs);
@@ -13,10 +22,6 @@ public class Chafer extends Insect implements Hibernationality {
         setIsSleeping(isSleeping);
     }
 
-    @Override
-    public String toString() {
-        return "Chafer{" + "isIncubation=" + isIncubation + "} " + super.toString();
-    }
 
     @Override
     public boolean canInjectPoison() {

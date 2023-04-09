@@ -17,7 +17,7 @@ class ChaferTest {
 
     @Test
     void testToString() {
-        Assertions.assertEquals("Chafer{isIncubation=true} Insect(name=Ivanka, numberOfLegs=6, hasWings=true, isDangerous=true, isSleeping=true)", chafer.toString());
+        Assertions.assertEquals("Chafer(super=Insect(name=Ivanka, numberOfLegs=6, hasWings=true, isDangerous=true, isSleeping=true), isIncubation=true)", chafer.toString());
     }
 
     @Test

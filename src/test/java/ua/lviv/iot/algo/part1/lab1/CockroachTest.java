@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Assertions;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class CockroachTest {
+public class  CockroachTest {
 
     Cockroach cockroach = new Cockroach("cockroach", 7, false, true, true);
 
