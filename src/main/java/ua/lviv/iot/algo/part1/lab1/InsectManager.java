@@ -1,20 +1,17 @@
 package ua.lviv.iot.algo.part1.lab1;
 
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @NoArgsConstructor
-@Getter
 public class InsectManager extends AddInsect {
-
 
     private List<Insect> insects = new ArrayList<>();
 
     public InsectManager(List<Insect> insects) {
-        this.insects = insects;
+        this.insects = new ArrayList<>(insects);
     }
 
     List<Insect> findAllWithMoreThan(final int legs) {
@@ -35,4 +32,7 @@ public class InsectManager extends AddInsect {
         insects.add(insect);
     }
 
+    public List<Insect> getInsects() {
+        return List.copyOf(insects);
+    }
 }
