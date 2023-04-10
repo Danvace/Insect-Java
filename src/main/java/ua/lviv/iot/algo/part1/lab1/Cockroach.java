@@ -7,7 +7,11 @@ public class Cockroach extends Insect {
 
     private final boolean vitality;
 
-    public Cockroach(String name, int numberOfLegs, boolean hasWings, boolean isDangerous, boolean vitality) {
+    public Cockroach(final String name,
+                     final int numberOfLegs,
+                     final boolean hasWings,
+                     final boolean isDangerous,
+                     final boolean vitality) {
         this.vitality = vitality;
         super.setNumberOfLegs(numberOfLegs);
         super.setHasWings(hasWings);
@@ -17,9 +21,7 @@ public class Cockroach extends Insect {
 
     @Override
     public String toString() {
-        return "Cockroach{" +
-                "vitality=" + vitality +
-                "} " + super.toString();
+        return "Cockroach{" + "vitality=" + vitality + "} " + super.toString();
     }
 
     @Override

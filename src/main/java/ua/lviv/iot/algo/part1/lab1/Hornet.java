@@ -5,7 +5,13 @@ public class Hornet extends Insect implements Hibernationality {
     private final boolean isOldQueen;
     private final boolean isQueen;
 
-    public Hornet(String name, int numberOfLegs, boolean hasWings, boolean isDangerous, boolean isSleeping, boolean isOldQueen, boolean isQueen) {
+    public Hornet(final String name,
+                  final int numberOfLegs,
+                  final boolean hasWings,
+                  final boolean isDangerous,
+                  final boolean isSleeping,
+                  final boolean isOldQueen,
+                  final boolean isQueen) {
         this.isOldQueen = isOldQueen;
         this.isQueen = isQueen;
         setNumberOfLegs(numberOfLegs);
@@ -13,15 +19,11 @@ public class Hornet extends Insect implements Hibernationality {
         setIsDangerous(isDangerous);
         setName(name);
         setIsSleeping(isSleeping);
-
-
     }
 
     @Override
     public String toString() {
-        return "Hornet{" +
-                "isOldQueen=" + isOldQueen +
-                "} " + super.toString();
+        return "Hornet{" + "isOldQueen=" + isOldQueen + "} " + super.toString();
     }
 
     @Override

@@ -12,8 +12,7 @@ public class Chafer extends Insect implements Hibernationality {
                   final boolean hasWings,
                   final boolean isDangerous,
                   final boolean isSleeping,
-                  final boolean isIncubation)
-    {
+                  final boolean isIncubation) {
         this.isIncubation = isIncubation;
         setName(name);
         setNumberOfLegs(numberOfLegs);
