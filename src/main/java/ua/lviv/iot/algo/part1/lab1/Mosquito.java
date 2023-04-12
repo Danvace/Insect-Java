@@ -1,13 +1,18 @@
 package ua.lviv.iot.algo.part1.lab1;
+
 import lombok.Getter;
 
 
 @Getter
-public class Mosquito extends Insect{
+public class Mosquito extends Insect {
 
     private final boolean hasHealthSting;
 
-    public Mosquito(String name, int numberOfLegs, boolean hasWings, boolean isDangerous, boolean hasHealthSting) {
+    public Mosquito(final String name,
+                    final int numberOfLegs,
+                    final boolean hasWings,
+                    final boolean isDangerous,
+                    final boolean hasHealthSting) {
         this.hasHealthSting = hasHealthSting;
         setHasWings(hasWings);
         setNumberOfLegs(numberOfLegs);
@@ -17,14 +22,12 @@ public class Mosquito extends Insect{
 
     @Override
     public String toString() {
-        return "Mosquito{" +
-                "hasHealthSting=" + hasHealthSting +
-                "} " + super.toString();
+        return "Mosquito{" + "hasHealthSting=" + hasHealthSting + "} " + super.toString();
     }
 
     @Override
     public boolean canInjectPoison() {
-        return hasHealthSting ;
+        return hasHealthSting;
     }
 
     @Override
