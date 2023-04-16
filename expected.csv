@@ -1,0 +1,18 @@
+isOldQueen, isQueen, name, numberOfLegs, hasWings, isDangerous, isSleeping
+false, true, hornet, 5, false, false, false
+hasHealthSting, name, numberOfLegs, hasWings, isDangerous, isSleeping
+true, Mosquito, 4, true, true, false
+hasHealthSting, name, numberOfLegs, hasWings, isDangerous, isSleeping
+false, Denys, 4, true, true, false
+isOldQueen, isQueen, name, numberOfLegs, hasWings, isDangerous, isSleeping
+false, true, hornet, 5, false, false, false
+isOldQueen, isQueen, name, numberOfLegs, hasWings, isDangerous, isSleeping
+false, true, KingJameson, 5, false, false, true
+vitality, name, numberOfLegs, hasWings, isDangerous, isSleeping
+true, cockroach, 7, false, true, false
+vitality, name, numberOfLegs, hasWings, isDangerous, isSleeping
+true, Ivan, 66, false, true, false
+isIncubation, name, numberOfLegs, hasWings, isDangerous, isSleeping
+false, Chafer, 4, false, true, false
+isIncubation, name, numberOfLegs, hasWings, isDangerous, isSleeping
+true, Ivanka, 6, false, true, true
