@@ -6,13 +6,10 @@ import lombok.Getter;
 @Getter
 public class Mosquito extends Insect {
 
+    public static final String HEADERS = "hasHealthSting";
     private final boolean hasHealthSting;
 
-    public Mosquito(final String name,
-                    final int numberOfLegs,
-                    final boolean hasWings,
-                    final boolean isDangerous,
-                    final boolean hasHealthSting) {
+    public Mosquito(final String name, final int numberOfLegs, final boolean hasWings, final boolean isDangerous, final boolean hasHealthSting) {
         this.hasHealthSting = hasHealthSting;
         setHasWings(hasWings);
         setNumberOfLegs(numberOfLegs);
@@ -35,4 +32,14 @@ public class Mosquito extends Insect {
         return false;
     }
 
+    @Override
+    public String getHeaders() {
+        return HEADERS + ", " + super.getHeaders();
+    }
+
+    @Override
+    public String toCSV() {
+        String string = hasHealthSting + ", ";
+        return string + super.toCSV();
+    }
 }

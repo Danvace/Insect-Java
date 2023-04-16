@@ -1,18 +1,17 @@
 package ua.lviv.iot.algo.part1.lab1;
 
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+@NoArgsConstructor
 @ToString(callSuper = true)
 public class Chafer extends Insect implements Hibernationality {
 
-    private final boolean isIncubation;
+    public static final String HEADERS = "isIncubation";
 
-    public Chafer(final String name,
-                  final int numberOfLegs,
-                  final boolean hasWings,
-                  final boolean isDangerous,
-                  final boolean isSleeping,
-                  final boolean isIncubation) {
+    private boolean isIncubation;
+
+    public Chafer(final String name, final int numberOfLegs, final boolean hasWings, final boolean isDangerous, final boolean isSleeping, final boolean isIncubation) {
         this.isIncubation = isIncubation;
         setName(name);
         setNumberOfLegs(numberOfLegs);
@@ -42,5 +41,16 @@ public class Chafer extends Insect implements Hibernationality {
     @Override
     public void wakeUp() {
         setIsSleeping(false);
+    }
+
+    @Override
+    public String getHeaders() throws SecurityException {
+        return HEADERS + ", " + super.getHeaders();
+    }
+
+    @Override
+    public String toCSV() {
+        String string = isIncubation + ", ";
+        return string + super.toCSV();
     }
 }
