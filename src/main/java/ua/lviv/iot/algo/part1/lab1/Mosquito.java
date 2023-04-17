@@ -34,7 +34,7 @@ public class Mosquito extends Insect {
 
     @Override
     public String getHeaders() {
-        return super.getHeaders() +", " + HEADERS;
+        return super.getHeaders() + ", " + HEADERS;
     }
 
     @Override

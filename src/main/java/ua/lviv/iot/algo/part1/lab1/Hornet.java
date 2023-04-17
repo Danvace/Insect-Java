@@ -47,7 +47,7 @@ public class Hornet extends Insect implements Hibernationality {
 
     @Override
     public String getHeaders() {
-        return super.getHeaders() +", " + HEADERS;
+        return super.getHeaders() + ", " + HEADERS;
     }
 
     @Override

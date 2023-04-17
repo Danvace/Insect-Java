@@ -1,10 +1,12 @@
 package ua.lviv.iot.algo.part1.lab1;
 
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @NoArgsConstructor
 @ToString(callSuper = true)
+@EqualsAndHashCode
 public class Chafer extends Insect implements Hibernationality {
 
     public static final String HEADERS = "isIncubation";
@@ -45,7 +47,7 @@ public class Chafer extends Insect implements Hibernationality {
 
     @Override
     public String getHeaders() throws SecurityException {
-        return  super.getHeaders() + ", " + HEADERS;
+        return super.getHeaders() + ", " + HEADERS;
     }
 
     @Override

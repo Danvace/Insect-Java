@@ -9,6 +9,6 @@ public abstract class AddInsect {
 
     abstract List<Insect> findAllWithWings();
 
-    abstract void addInsect(final Insect insect);
+    abstract void addInsect(Insect insect);
 
 }

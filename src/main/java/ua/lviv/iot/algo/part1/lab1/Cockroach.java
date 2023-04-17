@@ -33,13 +33,13 @@ public class Cockroach extends Insect {
 
     @Override
     public String getHeaders() {
-        return  super.getHeaders() + ", " + HEADERS;
+        return super.getHeaders() + ", " + HEADERS;
     }
 
     @Override
     public String toCSV() {
         String string = vitality + "";
-        return  super.toCSV() + string;
+        return super.toCSV() + string;
     }
 
 }

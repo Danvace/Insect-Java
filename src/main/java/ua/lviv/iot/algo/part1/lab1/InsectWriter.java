@@ -6,7 +6,7 @@ import java.util.List;
 
 public class InsectWriter {
 
-    public String smartlyWrite(List<Insect> insects, final String defaultFilePath) {
+    public String smartlyWrite(final List<Insect> insects, final String defaultFilePath) {
 
         if (insects == null || insects.isEmpty()) {
             return null;
