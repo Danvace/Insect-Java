@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -21,7 +22,7 @@ class InsectWriterTest {
 
     @AfterAll
     public static void teardown() throws IOException {
-        Files.deleteIfExists(Path.of(RESULT_WRITER));
+        Files.deleteIfExists(Path.of("fileForTestWithWords.csv"));
     }
 
     @BeforeEach
@@ -39,11 +40,12 @@ class InsectWriterTest {
         insects.add(new Chafer("Ivanka", 6, false, true, true, true));
 
         Files.deleteIfExists(Path.of(RESULT_WRITER));
+
     }
 
     @Test
     void testEmptyWrite() {
-        writer.write(null);
+        writer.smartlyWrite(null, null);
         File file = new File(RESULT_WRITER);
         Assertions.assertFalse(file.exists());
 
@@ -51,9 +53,21 @@ class InsectWriterTest {
 
     @Test
     void testWriteListOfInsects() throws IOException {
-        writer.write(insects);
-        Path expected = new File(RESULT_WRITER).toPath();
-        Path actual = new File(EXPECTED_WRITER).toPath();
+        writer.smartlyWrite(insects, "result.csv");
+        Path actual = new File(RESULT_WRITER).toPath();
+        Path expected = new File(EXPECTED_WRITER).toPath();
+        List<String> expectedLines = Files.readAllLines(expected);
+        List<String> actualLines = Files.readAllLines(actual);
+        Assertions.assertEquals(expectedLines, actualLines);
+    }
+
+    @Test
+    void testWriteToExistingFile() throws IOException {
+        var forTest = new FileWriter("fileForTestWithWords.csv");
+        forTest.write("Internet Of Things");
+        writer.smartlyWrite(insects, "fileForTestWithWords.csv");
+        Path actual = new File("fileForTestWithWords.csv").toPath();
+        Path expected = new File(EXPECTED_WRITER).toPath();
         List<String> expectedLines = Files.readAllLines(expected);
         List<String> actualLines = Files.readAllLines(actual);
         Assertions.assertEquals(expectedLines, actualLines);
