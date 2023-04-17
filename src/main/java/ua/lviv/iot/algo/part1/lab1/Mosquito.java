@@ -34,12 +34,12 @@ public class Mosquito extends Insect {
 
     @Override
     public String getHeaders() {
-        return HEADERS + ", " + super.getHeaders();
+        return super.getHeaders() +", " + HEADERS;
     }
 
     @Override
     public String toCSV() {
-        String string = hasHealthSting + ", ";
-        return string + super.toCSV();
+        String string = hasHealthSting + "";
+        return super.toCSV() + string;
     }
 }

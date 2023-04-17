@@ -26,11 +26,12 @@ public class InsectWriter {
     }
 
     public String write(List<Insect> insects) {
+
         if (insects == null || insects.isEmpty()) {
             return null;
         }
-        String defaultFilename = "result.csv";
-        try (var writer = new FileWriter(defaultFilename)) {
+        String defaultFileName = "result.csv";
+        try (var writer = new FileWriter(defaultFileName)) {
             for (var insect : insects) {
                 writer.write(insect.getHeaders());
                 writer.write("\n");
@@ -42,6 +43,23 @@ public class InsectWriter {
             e.printStackTrace();
         }
 
-        return defaultFilename;
+        return defaultFileName;
+    }
+
+    public String smartlyWrite(List<Insect> insects){
+
+        if (insects == null || insects.isEmpty()) {
+            return null;
+        }
+
+        String defaultFileName = "result.csv";
+        try (var writer = new FileWriter(defaultFileName)){
+
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return defaultFileName;
     }
 }

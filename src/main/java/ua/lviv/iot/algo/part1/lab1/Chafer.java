@@ -45,12 +45,12 @@ public class Chafer extends Insect implements Hibernationality {
 
     @Override
     public String getHeaders() throws SecurityException {
-        return HEADERS + ", " + super.getHeaders();
+        return  super.getHeaders() + ", " + HEADERS;
     }
 
     @Override
     public String toCSV() {
-        String string = isIncubation + ", ";
-        return string + super.toCSV();
+        String string = isIncubation + "";
+        return super.toCSV() + string;
     }
 }

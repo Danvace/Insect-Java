@@ -25,7 +25,7 @@ public abstract class Insect {
     }
 
     public String toCSV() {
-        String string = name + ", " + numberOfLegs + ", " + hasWings + ", " + isDangerous + ", " + isSleeping;
+        String string = name + ", " + numberOfLegs + ", " + hasWings + ", " + isDangerous + ", " + isSleeping + ", ";
         return string;
     }
 
