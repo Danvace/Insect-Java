@@ -30,4 +30,8 @@ class MosquitoTest {
         assertFalse(mosquito.surviveOverWinter());
     }
 
+    @Test
+    void testGetHeaders() {
+        Assertions.assertEquals("name, numberOfLegs, hasWings, isDangerous, isSleeping, hasHealthSting", mosquito.getHeaders());
+    }
 }

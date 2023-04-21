@@ -33,4 +33,9 @@ public class  CockroachTest {
         assertTrue(cockroach.surviveOverWinter());
     }
 
+    @Test
+    public void testGetHeaders() {
+        Assertions.assertEquals("name, numberOfLegs, hasWings, isDangerous, isSleeping, vitality",cockroach.getHeaders());
+    }
+
 }

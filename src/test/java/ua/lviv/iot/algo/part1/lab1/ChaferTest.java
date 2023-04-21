@@ -41,4 +41,9 @@ class ChaferTest {
         chafer.wakeUp();
         assertFalse(chafer.getIsSleeping());
     }
+
+    @Test
+    void testGetHeaders() {
+        Assertions.assertEquals("name, numberOfLegs, hasWings, isDangerous, isSleeping, isIncubation", chafer.getHeaders());
+    }
 }
