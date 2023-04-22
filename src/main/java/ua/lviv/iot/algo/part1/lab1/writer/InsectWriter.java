@@ -1,4 +1,6 @@
-package ua.lviv.iot.algo.part1.lab1;
+package ua.lviv.iot.algo.part1.lab1.writer;
+
+import ua.lviv.iot.algo.part1.lab1.models.Insect;
 
 import java.io.FileWriter;
 import java.util.Comparator;

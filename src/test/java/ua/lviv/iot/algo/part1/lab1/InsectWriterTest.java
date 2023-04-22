@@ -4,6 +4,8 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ua.lviv.iot.algo.part1.lab1.models.*;
+import ua.lviv.iot.algo.part1.lab1.writer.InsectWriter;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -19,11 +21,6 @@ class InsectWriterTest {
     private static final String EXPECTED_WRITER = "expected.csv";
     List<Insect> insects;
     private InsectWriter writer;
-
-    @AfterAll
-    public static void teardown() throws IOException {
-        Files.deleteIfExists(Path.of("fileForTestWithWords.csv"));
-    }
 
     @BeforeEach
     public void setup() throws IOException {
@@ -41,6 +38,11 @@ class InsectWriterTest {
 
         Files.deleteIfExists(Path.of(RESULT_WRITER));
 
+    }
+
+    @AfterAll
+    public static void teardown() throws IOException {
+        Files.deleteIfExists(Path.of("fileForTestWithWords.csv"));
     }
 
     @Test

@@ -1,6 +1,8 @@
 package ua.lviv.iot.algo.part1.lab1;
 
 import org.junit.jupiter.api.Test;
+import ua.lviv.iot.algo.part1.lab1.models.*;
+import ua.lviv.iot.algo.part1.lab1.manager.*;
 
 import java.util.Arrays;
 import java.util.List;
@@ -24,7 +26,7 @@ class InsectManagerTest {
 
 
     @Test
-    void findAllWithMoreThan() {
+    void testFindAllWithMoreThan() {
         List<Insect> result = manager.findAllWithMoreThan(6);
         assertEquals(2, result.size());
         assertEquals("cockroach", result.get(0).getName());
@@ -32,7 +34,7 @@ class InsectManagerTest {
     }
 
     @Test
-    void findAllWithWings() {
+    void testFindAllWithWings() {
         List<Insect> result = manager.findAllWithWings();
         assertEquals(2, result.size());
         assertEquals("Mosquito", result.get(0).getName());

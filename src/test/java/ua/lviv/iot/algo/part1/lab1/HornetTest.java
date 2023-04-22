@@ -3,6 +3,7 @@ package ua.lviv.iot.algo.part1.lab1;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ua.lviv.iot.algo.part1.lab1.models.Hornet;
 
 import static org.junit.jupiter.api.Assertions.*;
 

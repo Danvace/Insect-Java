@@ -1,4 +1,6 @@
-package ua.lviv.iot.algo.part1.lab1;
+package ua.lviv.iot.algo.part1.lab1.models;
+
+import ua.lviv.iot.algo.part1.lab1.Hibernationality;
 
 public class Hornet extends Insect implements Hibernationality {
 

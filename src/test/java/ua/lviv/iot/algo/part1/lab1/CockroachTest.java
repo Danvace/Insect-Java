@@ -2,6 +2,7 @@ package ua.lviv.iot.algo.part1.lab1;
 
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import ua.lviv.iot.algo.part1.lab1.models.Cockroach;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
