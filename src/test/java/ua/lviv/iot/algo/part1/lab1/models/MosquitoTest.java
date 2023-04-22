@@ -1,8 +1,9 @@
-package ua.lviv.iot.algo.part1.lab1;
+package ua.lviv.iot.algo.part1.lab1.models;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ua.lviv.iot.algo.part1.lab1.models.Mosquito;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -30,4 +31,8 @@ class MosquitoTest {
         assertFalse(mosquito.surviveOverWinter());
     }
 
+    @Test
+    void testGetHeaders() {
+        Assertions.assertEquals("name, numberOfLegs, hasWings, isDangerous, isSleeping, hasHealthSting", mosquito.getHeaders());
+    }
 }

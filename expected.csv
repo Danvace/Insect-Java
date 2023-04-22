@@ -1,0 +1,13 @@
+name, numberOfLegs, hasWings, isDangerous, isSleeping, isIncubation
+Chafer, 4, false, true, false, false
+Ivanka, 6, false, true, true, true
+name, numberOfLegs, hasWings, isDangerous, isSleeping, vitality
+cockroach, 7, false, true, false, true
+Ivan, 66, false, true, false, true
+name, numberOfLegs, hasWings, isDangerous, isSleeping, isOldQueen, isQueen
+hornet, 5, false, false, false, false, true
+hornet, 5, false, false, false, false, true
+KingJameson, 5, false, false, true, false, true
+name, numberOfLegs, hasWings, isDangerous, isSleeping, hasHealthSting
+Mosquito, 4, true, true, false, true
+Denys, 4, true, true, false, false

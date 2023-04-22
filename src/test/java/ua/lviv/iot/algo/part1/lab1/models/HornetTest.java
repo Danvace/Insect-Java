@@ -1,7 +1,9 @@
-package ua.lviv.iot.algo.part1.lab1;
+package ua.lviv.iot.algo.part1.lab1.models;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ua.lviv.iot.algo.part1.lab1.models.Hornet;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -39,5 +41,10 @@ class HornetTest {
     void wakeUp() {
         hornet.wakeUp();
         assertFalse(hornet.getIsSleeping());
+    }
+
+    @Test
+    void testGetHeaders() {
+        Assertions.assertEquals("name, numberOfLegs, hasWings, isDangerous, isSleeping, isOldQueen, isQueen", hornet.getHeaders());
     }
 }

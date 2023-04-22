@@ -1,11 +1,12 @@
-package ua.lviv.iot.algo.part1.lab1;
+package ua.lviv.iot.algo.part1.lab1.models;
 
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import ua.lviv.iot.algo.part1.lab1.models.Cockroach;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class  CockroachTest {
+public class CockroachTest {
 
     Cockroach cockroach = new Cockroach("cockroach", 7, false, true, true);
 
@@ -31,6 +32,11 @@ public class  CockroachTest {
     @Test
     public void testSurviveOverWinter() {
         assertTrue(cockroach.surviveOverWinter());
+    }
+
+    @Test
+    public void testGetHeaders() {
+        Assertions.assertEquals("name, numberOfLegs, hasWings, isDangerous, isSleeping, vitality", cockroach.getHeaders());
     }
 
 }
