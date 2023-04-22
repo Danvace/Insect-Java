@@ -1,8 +1,8 @@
 package ua.lviv.iot.algo.part1.lab1;
 
 import org.junit.jupiter.api.Test;
+import ua.lviv.iot.algo.part1.lab1.manager.InsectManager;
 import ua.lviv.iot.algo.part1.lab1.models.*;
-import ua.lviv.iot.algo.part1.lab1.manager.*;
 
 import java.util.Arrays;
 import java.util.List;

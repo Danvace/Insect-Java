@@ -22,6 +22,11 @@ class InsectWriterTest {
     List<Insect> insects;
     private InsectWriter writer;
 
+    @AfterAll
+    public static void teardown() throws IOException {
+        Files.deleteIfExists(Path.of("fileForTestWithWords.csv"));
+    }
+
     @BeforeEach
     public void setup() throws IOException {
         writer = new InsectWriter();
@@ -38,11 +43,6 @@ class InsectWriterTest {
 
         Files.deleteIfExists(Path.of(RESULT_WRITER));
 
-    }
-
-    @AfterAll
-    public static void teardown() throws IOException {
-        Files.deleteIfExists(Path.of("fileForTestWithWords.csv"));
     }
 
     @Test

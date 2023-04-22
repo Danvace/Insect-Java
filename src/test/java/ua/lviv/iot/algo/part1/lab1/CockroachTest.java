@@ -6,7 +6,7 @@ import ua.lviv.iot.algo.part1.lab1.models.Cockroach;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class  CockroachTest {
+public class CockroachTest {
 
     Cockroach cockroach = new Cockroach("cockroach", 7, false, true, true);
 
@@ -36,7 +36,7 @@ public class  CockroachTest {
 
     @Test
     public void testGetHeaders() {
-        Assertions.assertEquals("name, numberOfLegs, hasWings, isDangerous, isSleeping, vitality",cockroach.getHeaders());
+        Assertions.assertEquals("name, numberOfLegs, hasWings, isDangerous, isSleeping, vitality", cockroach.getHeaders());
     }
 
 }
