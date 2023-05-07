@@ -1,14 +1,21 @@
 package ua.lviv.iot.algo.part1.lab1.models;
 
+import lombok.Getter;
+import lombok.ToString;
+import org.junit.Test;
 import ua.lviv.iot.algo.part1.lab1.Hibernationality;
-
+@ToString(callSuper = true)
+@Getter
 public class Hornet extends Insect implements Hibernationality {
 
     public static final String HEADERS = "isOldQueen, isQueen";
-    private final boolean isOldQueen;
-    private final boolean isQueen;
+
+    private long id;
+    private  boolean isOldQueen;
+    private  boolean isQueen;
 
     public Hornet(final String name, final int numberOfLegs, final boolean hasWings, final boolean isDangerous, final boolean isSleeping, final boolean isOldQueen, final boolean isQueen) {
+        this.id = Insect.idCreate();
         this.isOldQueen = isOldQueen;
         this.isQueen = isQueen;
         setNumberOfLegs(numberOfLegs);
@@ -16,6 +23,11 @@ public class Hornet extends Insect implements Hibernationality {
         setIsDangerous(isDangerous);
         setName(name);
         setIsSleeping(isSleeping);
+
+    }
+
+    public Hornet() {
+        this.id = Insect.idCreate();
     }
 
     @Override
