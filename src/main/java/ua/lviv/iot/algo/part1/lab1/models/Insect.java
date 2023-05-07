@@ -9,8 +9,6 @@ import lombok.ToString;
 @ToString
 public abstract class Insect {
     public static final String HEADERS = "name, numberOfLegs, hasWings, isDangerous, isSleeping";
-
-    private static long idGenerate = 0;
     private String name;
     private int numberOfLegs;
     private Boolean hasWings = false;
@@ -28,9 +26,4 @@ public abstract class Insect {
     public String toCSV() {
         return name + ", " + numberOfLegs + ", " + hasWings + ", " + isDangerous + ", " + isSleeping + ", ";
     }
-
-    public static long idCreate() {
-        return ++idGenerate;
-    }
-
 }

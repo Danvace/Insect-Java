@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.*;
 import ua.lviv.iot.algo.part1.lab1.models.Hornet;
 import ua.lviv.iot.algo.part1.lab1.service.HornetService;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(path = "/Hornets")
 public class HornetController {
@@ -18,27 +20,31 @@ public class HornetController {
         this.hornetService = hornetService;
     }
 
-    @GetMapping(path = "/get/{id}")
-    public Hornet getHornet(@PathVariable long id) {
+    @GetMapping
+    public List<Hornet> getAllHornets() {
+        return hornetService.getHornetMap().values().stream().toList();
+    }
+
+    @GetMapping(path = "/{id}")
+    public Hornet getHornet(@PathVariable Integer id) {
         return hornetService.findById(id);
     }
 
-    @RequestMapping(path = "/post")
     @PostMapping()
-    public void postHornet() {
-        var hornet = new Hornet();
+    public Hornet postHornet(@RequestBody Hornet hornet) { // @RequestBody Hornet hornet
+        hornet.setHornetId(hornetService.getNextAvailable());
         hornetService.addHornet(hornet);
+        return hornet;
     }
 
-    @RequestMapping(path = "/edit")
-    @PutMapping()
-    public void putHornet(@RequestBody Hornet hornet) {
-        hornetService.putHornet(hornet.getId(), hornet);
+
+    @PutMapping(path = "/{id}")
+    public void putHornet(@RequestBody Hornet hornet, @PathVariable Integer id) {
+        hornetService.putHornet(id, hornet);
     }
 
-    @RequestMapping(path = "/delete/{id}")
-    @DeleteMapping()
-    public void deleteHornet(@PathVariable long id) {
+    @DeleteMapping(path = "/{id}")
+    public void deleteHornet(@PathVariable Integer id) {
         hornetService.deleteHornet(id);
     }
 

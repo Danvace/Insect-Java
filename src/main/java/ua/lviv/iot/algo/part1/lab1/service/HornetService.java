@@ -1,32 +1,40 @@
 package ua.lviv.iot.algo.part1.lab1.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.Getter;
 import org.springframework.stereotype.Service;
 import ua.lviv.iot.algo.part1.lab1.models.Hornet;
-import ua.lviv.iot.algo.part1.lab1.repository.HornetRepository;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @Service
+@Getter
 public class HornetService {
-    private final HornetRepository  hornetRepository;
 
-    @Autowired
+    private final Map<Integer, Hornet> hornetMap;
+    private Integer nextAvailable = 1;
+
     public HornetService() {
-        hornetRepository = new HornetRepository();
+        hornetMap = new HashMap<>();
     }
 
-    public Hornet findById(long id) {
-        return hornetRepository.getHornet(id);
+    public Hornet findById(Integer id) {
+        return getHornet(id);
     }
 
     public void addHornet(Hornet hornet) {
-        hornetRepository.addHornet(hornet);
+        hornetMap.put(this.nextAvailable++, hornet);
     }
 
-    public void putHornet(long id, Hornet hornet) {
-        hornetRepository.editHornet(id, hornet);
+    public void deleteHornet(Integer id) {
+        hornetMap.remove(id);
     }
 
-    public void deleteHornet(long id) {
-        hornetRepository.deleteHornet(id);
+    public Hornet getHornet(Integer id) {
+        return hornetMap.get(id);
+    }
+
+    public void putHornet(Integer id, Hornet hornet) {
+        hornetMap.replace(id, hornet);
     }
 }

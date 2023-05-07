@@ -1,21 +1,24 @@
 package ua.lviv.iot.algo.part1.lab1.models;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.ToString;
-import org.junit.Test;
 import ua.lviv.iot.algo.part1.lab1.Hibernationality;
+
 @ToString(callSuper = true)
 @Getter
+@Setter
+@NoArgsConstructor
 public class Hornet extends Insect implements Hibernationality {
 
-    public static final String HEADERS = "isOldQueen, isQueen";
+    public static final String HEADERS = "hornetId, isOldQueen, isQueen";
 
-    private long id;
-    private  boolean isOldQueen;
-    private  boolean isQueen;
+    private Integer hornetId;
+    private boolean isOldQueen;
+    private boolean isQueen;
 
     public Hornet(final String name, final int numberOfLegs, final boolean hasWings, final boolean isDangerous, final boolean isSleeping, final boolean isOldQueen, final boolean isQueen) {
-        this.id = Insect.idCreate();
         this.isOldQueen = isOldQueen;
         this.isQueen = isQueen;
         setNumberOfLegs(numberOfLegs);
@@ -26,14 +29,6 @@ public class Hornet extends Insect implements Hibernationality {
 
     }
 
-    public Hornet() {
-        this.id = Insect.idCreate();
-    }
-
-    @Override
-    public String toString() {
-        return "Hornet{" + "isOldQueen=" + isOldQueen + "} " + super.toString();
-    }
 
     @Override
     public boolean canInjectPoison() {
@@ -66,7 +61,7 @@ public class Hornet extends Insect implements Hibernationality {
 
     @Override
     public String toCSV() {
-        String string = isOldQueen + ", " + isQueen;
+        String string = hornetId + ", " + isOldQueen + ", " + isQueen;
         return super.toCSV() + string;
     }
 }
