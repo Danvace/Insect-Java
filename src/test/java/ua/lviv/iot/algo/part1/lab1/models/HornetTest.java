@@ -3,7 +3,6 @@ package ua.lviv.iot.algo.part1.lab1.models;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ua.lviv.iot.algo.part1.lab1.models.Hornet;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -17,7 +16,7 @@ class HornetTest {
 
     @Test
     void testToString() {
-        assertEquals("Hornet{isOldQueen=false} Insect(name=hornet, numberOfLegs=5, hasWings=true, isDangerous=false, isSleeping=false)", hornet.toString());
+        assertEquals("Hornet(super=Insect(name=hornet, numberOfLegs=5, hasWings=true, isDangerous=false, isSleeping=false), hornetId=null, isOldQueen=false, isQueen=true)", hornet.toString());
 
     }
 
@@ -45,6 +44,6 @@ class HornetTest {
 
     @Test
     void testGetHeaders() {
-        Assertions.assertEquals("name, numberOfLegs, hasWings, isDangerous, isSleeping, isOldQueen, isQueen", hornet.getHeaders());
+        Assertions.assertEquals("name, numberOfLegs, hasWings, isDangerous, isSleeping, id, isOldQueen, isQueen", hornet.getHeaders());
     }
 }

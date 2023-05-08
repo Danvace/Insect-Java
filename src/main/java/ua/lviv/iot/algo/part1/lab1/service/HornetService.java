@@ -26,12 +26,13 @@ public class HornetService {
     }
 
     public Hornet getHornet(final Integer id) {
-        return new Hornet(hornetMap.get(id),id);
+        return hornetMap.get(id);
     }
 
     public void putHornet(final Integer id, final Hornet hornet) {
         hornetMap.replace(id, hornet);
     }
+
 
     public Map<Integer, Hornet> getHornetMap() {
         return new HashMap<>(hornetMap);
