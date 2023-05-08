@@ -12,11 +12,10 @@ import java.util.List;
 @RequestMapping(path = "/Hornets")
 public class HornetController {
 
-
     private final HornetService hornetService;
 
     @Autowired
-    public HornetController(HornetService hornetService) {
+    public HornetController(final HornetService hornetService) {
         this.hornetService = hornetService;
     }
 
@@ -26,12 +25,12 @@ public class HornetController {
     }
 
     @GetMapping(path = "/{id}")
-    public Hornet getHornet(@PathVariable Integer id) {
-        return hornetService.findById(id);
+    public Hornet getHornet(@PathVariable final Integer id) {
+        return hornetService.getHornet(id);
     }
 
     @PostMapping()
-    public Hornet postHornet(@RequestBody Hornet hornet) { // @RequestBody Hornet hornet
+    public Hornet postHornet(@RequestBody final Hornet hornet) {
         hornet.setHornetId(hornetService.getNextAvailable());
         hornetService.addHornet(hornet);
         return hornet;
@@ -39,15 +38,13 @@ public class HornetController {
 
 
     @PutMapping(path = "/{id}")
-    public void putHornet(@RequestBody Hornet hornet, @PathVariable Integer id) {
+    public void putHornet(@RequestBody final Hornet hornet, @PathVariable final Integer id) {
         hornetService.putHornet(id, hornet);
     }
 
     @DeleteMapping(path = "/{id}")
-    public void deleteHornet(@PathVariable Integer id) {
+    public void deleteHornet(@PathVariable final Integer id) {
         hornetService.deleteHornet(id);
     }
-
-
 }
 

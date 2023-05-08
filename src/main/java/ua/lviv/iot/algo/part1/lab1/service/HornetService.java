@@ -1,6 +1,5 @@
 package ua.lviv.iot.algo.part1.lab1.service;
 
-import lombok.Getter;
 import org.springframework.stereotype.Service;
 import ua.lviv.iot.algo.part1.lab1.models.Hornet;
 
@@ -8,7 +7,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
-@Getter
 public class HornetService {
 
     private final Map<Integer, Hornet> hornetMap;
@@ -18,23 +16,28 @@ public class HornetService {
         hornetMap = new HashMap<>();
     }
 
-    public Hornet findById(Integer id) {
-        return getHornet(id);
-    }
 
-    public void addHornet(Hornet hornet) {
+    public void addHornet(final Hornet hornet) {
         hornetMap.put(this.nextAvailable++, hornet);
     }
 
-    public void deleteHornet(Integer id) {
+    public void deleteHornet(final Integer id) {
         hornetMap.remove(id);
     }
 
-    public Hornet getHornet(Integer id) {
-        return hornetMap.get(id);
+    public Hornet getHornet(final Integer id) {
+        return new Hornet(hornetMap.get(id),id);
     }
 
-    public void putHornet(Integer id, Hornet hornet) {
+    public void putHornet(final Integer id, final Hornet hornet) {
         hornetMap.replace(id, hornet);
+    }
+
+    public Map<Integer, Hornet> getHornetMap() {
+        return new HashMap<>(hornetMap);
+    }
+
+    public Integer getNextAvailable() {
+        return nextAvailable;
     }
 }

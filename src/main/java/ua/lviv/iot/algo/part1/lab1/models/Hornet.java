@@ -29,6 +29,16 @@ public class Hornet extends Insect implements Hibernationality {
 
     }
 
+    public Hornet(final Hornet hornet,final Integer hornetId) {
+        this.hornetId = hornetId;
+        this.isOldQueen = hornet.isOldQueen();
+        this.isQueen = hornet.isQueen;
+        setNumberOfLegs(hornet.getNumberOfLegs());
+        setHasWings(hornet.getHasWings());
+        setIsDangerous(hornet.getIsDangerous());
+        setName(hornet.getName());
+        setIsSleeping(hornet.getIsSleeping());
+    }
 
     @Override
     public boolean canInjectPoison() {

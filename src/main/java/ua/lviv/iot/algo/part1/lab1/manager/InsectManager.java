@@ -12,7 +12,7 @@ public class InsectManager extends AddInsect {
 
     private List<Insect> insects = new ArrayList<>();
 
-    public InsectManager(List<Insect> insects) {
+    public InsectManager(final List<Insect> insects) {
         this.insects = new ArrayList<>(insects);
     }
 
