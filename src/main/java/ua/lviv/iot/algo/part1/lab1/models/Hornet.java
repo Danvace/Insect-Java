@@ -29,7 +29,7 @@ public class Hornet extends Insect implements Hibernationality {
 
     }
 
-    public Hornet(final Hornet hornet,final Integer hornetId) {
+    public Hornet(final Hornet hornet, final Integer hornetId) {
         this.hornetId = hornetId;
         this.isOldQueen = hornet.isOldQueen();
         this.isQueen = hornet.isQueen;

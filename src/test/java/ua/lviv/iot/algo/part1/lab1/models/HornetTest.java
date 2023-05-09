@@ -44,6 +44,6 @@ class HornetTest {
 
     @Test
     void testGetHeaders() {
-        Assertions.assertEquals("name, numberOfLegs, hasWings, isDangerous, isSleeping, id, isOldQueen, isQueen", hornet.getHeaders());
+        Assertions.assertEquals("name, numberOfLegs, hasWings, isDangerous, isSleeping, hornetId, isOldQueen, isQueen", hornet.getHeaders());
     }
 }
