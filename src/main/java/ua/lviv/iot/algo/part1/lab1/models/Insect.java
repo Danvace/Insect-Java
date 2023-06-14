@@ -8,7 +8,6 @@ import lombok.ToString;
 @Getter
 @ToString
 public abstract class Insect {
-
     public static final String HEADERS = "name, numberOfLegs, hasWings, isDangerous, isSleeping";
     private String name;
     private int numberOfLegs;
@@ -25,9 +24,6 @@ public abstract class Insect {
     }
 
     public String toCSV() {
-        String string = name + ", " + numberOfLegs + ", " + hasWings + ", " + isDangerous + ", " + isSleeping + ", ";
-        return string;
+        return name + ", " + numberOfLegs + ", " + hasWings + ", " + isDangerous + ", " + isSleeping + ", ";
     }
-
-
 }

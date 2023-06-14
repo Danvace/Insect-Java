@@ -5,7 +5,7 @@ import java.util.List;
 
 public abstract class AddInsect {
 
-    public abstract List<Insect> findAllWithMoreThan(final int legs);
+    public abstract List<Insect> findAllWithMoreThan(int legs);
 
     public abstract List<Insect> findAllWithWings();
 
